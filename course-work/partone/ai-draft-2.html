@@ -1,0 +1,236 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Welcome to the personal portfolio of Alimatou K Fatty, a Computer Science student, entrepreneur, and creative professional.">
+
+    <meta name="author" content="Alimatou K Fatty">
+
+    <meta name="theme-color" content="#6b4226">
+
+    <title>Alimatou K Fatty | Personal Portfolio</title>
+
+    <style>
+        /* =========================
+           1. GLOBAL STYLES
+        ========================== */
+
+        :root {
+            --primary: #6b4226;
+            --secondary: #8b5e3c;
+            --dark: #2e2119;
+            --cream: #f5f0e8;
+            --white: #ffffff;
+            --text: #51463e;
+            --light-brown: #ead9c8;
+            --shadow: 0 10px 35px rgba(54, 35, 22, 0.10);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--primary);
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--secondary);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            color: var(--primary);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* =========================
+           3. HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #ead9c8 0,
+                    transparent 40%
+                ),
+                var(--cream);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 65px;
+            padding: 75px 0;
+        }
+
+        .hero-text .eyebrow {
+            display: inline-block;
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: var(--dark);
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero-text p {
+            max-width: 540px;
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #4e301c;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--light-brown);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 330px;
+            height: 390px;
+            object-fit: cover;
